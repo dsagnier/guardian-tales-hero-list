@@ -3,6 +3,7 @@ module.exports = {
   env: {
     node: true
   },
+  publicPath: process.env.MODE_ENV === 'production' ? '/guardian-tales-hero-list/' : '/'
   'extends': [
     'plugin:vue/vue3-essential',
     'eslint:recommended'
