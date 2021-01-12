@@ -1,6 +1,6 @@
 <template>
     <div id="nav">
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
                 <router-link class="navbar-brand" to="/">Home</router-link>
             </div>
@@ -25,5 +25,8 @@
 
 #nav a.router-link-exact-active {
     color: #42b983;
+}
+body {
+    background-color: #0E1214;
 }
 </style>
