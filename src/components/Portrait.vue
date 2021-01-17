@@ -4,15 +4,19 @@
             <img class="role-icone" :src="require('@/assets/role/'+hero.role+'.png')" />
             <img class="element-icone" :src="require('@/assets/element/'+hero.element+'.png')" />
         </div>
+        <star-rating default_value="3"></star-rating>
         <div class="hero-name" :style="{color: getElementColor(hero.element)}">{{hero.fullName}}</div>
-        <div class="star"><i class="bi bi-star-fill"></i></div>
     </div>
 </template>
 
 <script>
+import starRating from '@/components/StarRating.vue'
 export default {
     name: 'Portrait',
     props: ['hero'],
+    components : {
+        starRating
+    },
     methods: {
         getElementColor(element) {
             if(element == "feu") {
